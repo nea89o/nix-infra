@@ -33,5 +33,11 @@
 
   networking.hostName = "alpha-site";
 
+  networking.firewall.allowedTCPPorts = [
+    22
+    80
+    443
+  ];
+
   system.stateVersion = "24.11";
 }
