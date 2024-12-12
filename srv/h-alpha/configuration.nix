@@ -10,13 +10,12 @@
     ./disko-config.nix
   ];
   boot.loader.systemd-boot.enable = true;
-  #  boot.loader.grub.device = "/dev/sda";
 
   users.users.nea = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINg2WYMRKINwbH5UCqqK2qq/qW0gG1NnaALHqEyU4NzM"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINg2WYMRKINwbH5UCqqK2qq/qW0gG1NnaALHqEyU4NzM nea@smiley-mk1"
     ];
   };
 
