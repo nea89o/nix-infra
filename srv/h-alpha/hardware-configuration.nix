@@ -24,4 +24,14 @@
   swapDevices = [ ];
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  systemd.networks.networks."30-wan" = {
+    matchConfig.Name = "enp1s0";
+    networkConfig.DHCP = "ipv4";
+    address = [
+      "2a01:4f9:c012:5dd3::/64"
+    ];
+    routes = [
+      { Gateway = "fe80::1"; }
+    ];
+  };
 }
