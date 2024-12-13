@@ -41,7 +41,7 @@ in
           name: value:
           attrsets.nameValuePair (name + "." + cfg.baseUrl) {
             extraConfig = ''
-              reverse_proxy http://localhost:${toString value.port}/
+              reverse_proxy http://localhost:${toString value.port}
             '';
           }
         ) cfg.reverseProxy;
