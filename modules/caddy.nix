@@ -19,9 +19,11 @@ in
     reverseProxy = mkOption {
       type = types.attrsOf (
         types.submodule {
-          port = mkOption {
-            type = int;
-            description = "The local port of the reverse proxied service";
+          options = {
+            port = mkOption {
+              type = types.int;
+              description = "The local port of the reverse proxied service";
+            };
           };
         }
       );
@@ -39,7 +41,7 @@ in
           name: value:
           attrsets.nameValuePair (name + "." + cfg.baseUrl) {
             extraConfig = ''
-              reverse_proxy http://localhost:${value.port}/
+              reverse_proxy http://localhost:${toString value.port}/
             '';
           }
         ) cfg.reverseProxy;

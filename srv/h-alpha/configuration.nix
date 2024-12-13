@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ./disko-config.nix
+    ./services.nix
   ];
   boot.loader.systemd-boot.enable = true;
 
