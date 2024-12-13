@@ -28,7 +28,7 @@
     matchConfig.Name = "enp1s0";
     addresses = [
       { Address = "65.21.54.251"; }
-      { Address = "2a01:4f9:c012:5dd3::/64"; }
+      { Address = "2a01:4f9:c012:5dd3::/64"; } # TODO: figure out if nix lets me bind against the entire block using anyip
     ];
 
     routes = [
