@@ -22,16 +22,20 @@
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
   swapDevices = [ ];
-  networking.useDHCP = lib.mkDefault true;
-  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
-  systemd.network.networks."30-wan" = {
-    matchConfig.Name = "enp1s0";
-    networkConfig.DHCP = "ipv4";
-    address = [
-      "2a01:4f9:c012:5dd3::/64"
-    ];
-    routes = [
-      { Gateway = "fe80::1"; }
-    ];
+  networking = {
+    useDHCP = false;
+    defaultGateway6 = {
+      address = "fe80::1";
+      interface = "enp1s0";
+    };
+    interfaces.enp1s0 = {
+      ipv6.addresses = [
+        {
+          address = "2a01:4f9:c012:5dd3::";
+          prefixLength = 64;
+        }
+      ];
+    };
   };
+  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }
