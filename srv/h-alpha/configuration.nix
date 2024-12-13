@@ -31,6 +31,8 @@
     };
   };
 
+  programs.git.enable = true;
+
   networking.hostName = "alpha-site";
 
   networking.firewall.allowedTCPPorts = [
