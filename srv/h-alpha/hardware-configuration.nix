@@ -27,8 +27,8 @@
   systemd.network.networks."30-wan" = {
     matchConfig.Name = "enp1s0";
     addresses = [
-      "2a01:4f9:c012:5dd3::/64"
-      "65.21.54.251"
+      { Address = "65.21.54.251"; }
+      { Address = "2a01:4f9:c012:5dd3::/64"; }
     ];
 
     routes = [
