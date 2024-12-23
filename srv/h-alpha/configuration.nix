@@ -10,6 +10,9 @@
     ./disko-config.nix
     ./services.nix
   ];
+
+  nix.package = pkgs.lix;
+
   boot.loader.systemd-boot.enable = true;
 
   users.users.nea = {
