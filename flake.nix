@@ -21,6 +21,10 @@
     let
       osConfig = {
         nixosConfigurations = {
+          hadante = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [ ./srv/hadante/configuration.nix ];
+          };
           alpha-site = nixpkgs.lib.nixosSystem {
             system = "aarch64-linux";
             modules = [
