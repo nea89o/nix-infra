@@ -127,6 +127,14 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  fonts.packages = with pkgs; [
+
+    nerd-fonts.comic-shanns-mono
+    nerd-fonts.blex-mono
+    symbola
+
+  ];
+
   environment.systemPackages = with pkgs; [
     neovim
     atuin
@@ -143,10 +151,6 @@
     sway
     webp-pixbuf-loader
     delta
-
-    nerd-fonts.comic-shanns-mono
-    nerd-fonts.blex-mono
-    symbola
 
     wezterm
 
