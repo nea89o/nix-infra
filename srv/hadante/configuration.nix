@@ -42,6 +42,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.ly.enable = true;
+  services.displayManager.sessionData.wrapper = "sway";
 
   # Configure keymap in X11
   services.xserver.xkb = {
