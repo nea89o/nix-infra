@@ -6,6 +6,12 @@
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+
+      # Optional but recommended to limit the size of your system closure.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +21,7 @@
     inputs@{
       self,
       nixpkgs,
+      lanzaboote,
       flake-utils,
       ...
     }:
@@ -23,7 +30,23 @@
         nixosConfigurations = {
           hadante = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
-            modules = [ ./srv/hadante/configuration.nix ];
+            modules = [
+              ./srv/hadante/configuration.nix
+              lanzaboote.nixosModules.lanzaboote
+              (
+                { pkgs, lib, ... }:
+                {
+                  environment.systemPackages = [
+                    pkgs.sbctl
+                  ];
+                  boot.loader.systemd-boot.enable = lib.mkForce false;
+                  boot.lanzaboote = {
+                    enable = true;
+                    pkiBundle = "/var/lib/sbctl";
+                  };
+                }
+              )
+            ];
           };
           alpha-site = nixpkgs.lib.nixosSystem {
             system = "aarch64-linux";
