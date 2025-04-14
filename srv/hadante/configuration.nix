@@ -139,6 +139,7 @@
     emacs
     atuin
 
+    thunderbird
     sway
     webp-pixbuf-loader
     delta
