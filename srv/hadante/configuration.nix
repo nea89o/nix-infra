@@ -144,6 +144,10 @@
     webp-pixbuf-loader
     delta
 
+    nerd-fonts.comic-shanns-mono
+    nerd-fonts.blex-mono
+    symbola
+
     wezterm
 
     vesktop
