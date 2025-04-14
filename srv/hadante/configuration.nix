@@ -41,9 +41,14 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.ly.enable = true;
-  services.displayManager.sessionData.wrapper = "sway";
-
+  services.displayManager.ly = {
+    settings = {
+      animation = "matrix";
+      default_input = "password";
+      text_in_center = true;
+    };
+    enable = true;
+  };
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de";
