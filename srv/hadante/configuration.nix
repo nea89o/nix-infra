@@ -103,25 +103,26 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryPackage = pkgs.pinentry-qt;
-  };
+  programs = {
+    firefox.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    shellInit = ''
-      export ZDOTDIR=~/.config/zsh
-    '';
-  };
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-qt;
+    };
+    zsh = {
+      enable = true;
+      shellInit = ''
+        export ZDOTDIR=~/.config/zsh
+      '';
+    };
 
+    steam.enable = true;
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
