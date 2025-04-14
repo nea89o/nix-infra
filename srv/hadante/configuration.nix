@@ -166,5 +166,7 @@
     jdk17
     jdk21
     jdk23
+
+    sbctl
   ];
 }
