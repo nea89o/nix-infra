@@ -160,7 +160,7 @@
     vesktop
     ripgrep
 
-    prismlauncher-unwrapped
+    prismlauncher
     jdk8
     jdk17
     jdk21
