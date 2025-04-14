@@ -152,5 +152,6 @@
     wezterm
 
     vesktop
+    ripgrep
   ];
 }
