@@ -161,5 +161,9 @@
     ripgrep
 
     prismlauncher-unwrapped
+    jdk8
+    jdk17
+    jdk21
+    jdk23
   ];
 }
