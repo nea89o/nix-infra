@@ -91,6 +91,7 @@
       #  thunderbird
     ];
   };
+  users.defaultUserShell = pkgs.zsh;
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
@@ -112,6 +113,13 @@
     pinentryPackage = pkgs.pinentry-qt;
   };
 
+  programs.zsh = {
+    enable = true;
+    shellInit = ''
+      export ZDOTDIR=~/.config/zsh
+    '';
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -123,14 +131,17 @@
     neovim
     atuin
     git
+    zsh
     yadm
     openssl
     xxd
     pinentry-qt
     emacs
-    
+    atuin
+
     sway
     webp-pixbuf-loader
+    delta
 
     wezterm
 
