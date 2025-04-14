@@ -159,5 +159,7 @@
 
     vesktop
     ripgrep
+
+    prismlauncher-unwrapped
   ];
 }
