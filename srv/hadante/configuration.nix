@@ -173,6 +173,7 @@
     wl-clipboard
     imagemagick
     slurp
+    swayimg
 
   ];
 }
