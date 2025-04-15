@@ -168,5 +168,11 @@
     jdk23
 
     sbctl
+
+    grim
+    wl-clipboard
+    imagemagic
+    slurp
+
   ];
 }
