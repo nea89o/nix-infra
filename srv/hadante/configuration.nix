@@ -171,7 +171,7 @@
 
     grim
     wl-clipboard
-    imagemagic
+    imagemagick
     slurp
 
   ];
