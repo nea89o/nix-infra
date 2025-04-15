@@ -178,5 +178,7 @@
 
     jetbrains.idea-ultimate
 
+    calibre
+
   ];
 }
