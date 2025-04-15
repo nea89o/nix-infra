@@ -176,5 +176,7 @@
     swayimg
     shutter
 
+    jetbrains.idea-ultimate
+
   ];
 }
