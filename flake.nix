@@ -16,11 +16,19 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+
+    };
+
   };
   outputs =
     inputs@{
       self,
       nixpkgs,
+      nix-index-database,
       lanzaboote,
       flake-utils,
       ...
@@ -33,6 +41,7 @@
             modules = [
               ./srv/hadante/configuration.nix
               lanzaboote.nixosModules.lanzaboote
+              nix-index-database.nixosModules.nix-index
               (
                 { pkgs, lib, ... }:
                 {

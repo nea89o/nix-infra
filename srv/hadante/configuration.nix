@@ -169,12 +169,7 @@
 
     sbctl
 
-    grim
     wl-clipboard
-    imagemagick
-    slurp
-    swayimg
-    shutter
 
     jetbrains.idea-ultimate
 
