@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+inputs@{
+  config,
+  pkgs,
+  customss,
+  ...
+}:
 
 {
   imports = [
@@ -138,44 +143,48 @@
 
   ];
 
-  environment.systemPackages = with pkgs; [
-    neovim
-    atuin
-    git
-    zsh
-    yadm
-    openssl
-    xxd
-    pinentry-qt
-    emacs
-    atuin
+  environment.systemPackages = (
+    with pkgs;
+    [
+      neovim
+      atuin
+      git
+      zsh
+      yadm
+      openssl
+      xxd
+      pinentry-qt
+      emacs
+      atuin
 
-    thunderbird
-    sway
-    webp-pixbuf-loader
-    delta
-    rofi
+      thunderbird
+      sway
+      webp-pixbuf-loader
+      delta
+      rofi
 
-    wezterm
+      wezterm
 
-    vesktop
-    ripgrep
+      vesktop
+      ripgrep
 
-    prismlauncher
-    jdk8
-    jdk17
-    jdk21
-    jdk23
+      prismlauncher
+      jdk8
+      jdk17
+      jdk21
+      jdk23
 
-    sbctl
+      sbctl
 
-    wl-clipboard
+      wl-clipboard
 
-    jetbrains.idea-ultimate
+      jetbrains.idea-ultimate
 
-    calibre
+      calibre
 
-    electrum
+      electrum
 
-  ];
+      myss
+    ]
+  );
 }

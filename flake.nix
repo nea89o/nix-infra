@@ -17,6 +17,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    customss = {
+      url = "github:nea89o/customss";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,14 +36,20 @@
       nix-index-database,
       lanzaboote,
       flake-utils,
+      customss,
       ...
     }:
     let
       osConfig = {
         nixosConfigurations = {
-          hadante = nixpkgs.lib.nixosSystem {
+          hadante = nixpkgs.lib.nixosSystem rec {
             system = "x86_64-linux";
             modules = [
+              (inputs: {
+                nixpkgs.overlays = [
+                  customss.overlays.default
+                ];
+              })
               ./srv/hadante/configuration.nix
               lanzaboote.nixosModules.lanzaboote
               nix-index-database.nixosModules.nix-index
