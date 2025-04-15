@@ -174,6 +174,7 @@
     imagemagick
     slurp
     swayimg
+    shutter
 
   ];
 }
