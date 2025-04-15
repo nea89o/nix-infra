@@ -180,5 +180,7 @@
 
     calibre
 
+    electrum
+
   ];
 }
