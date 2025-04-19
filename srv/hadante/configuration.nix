@@ -186,6 +186,8 @@ inputs@{
       electrum
 
       myss
+
+      bolt-launcher
     ]
   );
 }
