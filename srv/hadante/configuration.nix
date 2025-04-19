@@ -179,6 +179,7 @@ inputs@{
       wl-clipboard
 
       jetbrains.idea-ultimate
+      jetbrains.rust-rover
 
       calibre
 
