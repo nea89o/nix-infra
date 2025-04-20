@@ -119,6 +119,10 @@ inputs@{
       enableSSHSupport = true;
       pinentryPackage = pkgs.pinentry-qt;
     };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
     zsh = {
       enable = true;
       shellInit = ''
@@ -188,8 +192,6 @@ inputs@{
       myss
 
       bolt-launcher
-
-      direnv
     ]
   );
 }
