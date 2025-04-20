@@ -192,6 +192,8 @@ inputs@{
       myss
 
       bolt-launcher
+
+      vscode
     ]
   );
 }
