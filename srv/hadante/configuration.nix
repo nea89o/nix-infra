@@ -188,6 +188,8 @@ inputs@{
       myss
 
       bolt-launcher
+
+      direnv
     ]
   );
 }
