@@ -195,7 +195,6 @@ inputs@{
 
       vscode
       gamescope
-      wakapi
     ]
   );
 }
