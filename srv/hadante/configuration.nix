@@ -170,7 +170,7 @@ in
         ) javas)
         // {
           ".gradle/gradle.properties".text = ''
-
+            test.property = true
           '';
         };
       home.stateVersion = "25.05";
