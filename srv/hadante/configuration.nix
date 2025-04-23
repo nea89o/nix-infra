@@ -155,6 +155,7 @@ in
       programs.kitty = {
         enable = true;
       };
+      stateVersion = "25.05";
     };
 
     environment.systemPackages = (
