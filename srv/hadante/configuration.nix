@@ -206,6 +206,7 @@ in
 
         vscode
         gamescope
+        nil
       ]
     );
   };
