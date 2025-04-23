@@ -5,7 +5,6 @@
 {
   config,
   pkgs,
-  customss,
   inputs,
   ...
 }:
@@ -142,8 +141,6 @@ in
       "flakes"
     ];
 
-    system.stateVersion = "25.05"; # Did you read the comment?
-
     fonts.packages = with pkgs; [
 
       nerd-fonts.comic-shanns-mono
@@ -154,6 +151,9 @@ in
     home-manager.users.${config.user} = {
       programs.kitty = {
         enable = true;
+      };
+      home.file = {
+        ".jdks/jdk21".source = pkgs.jdk21;
       };
       home.stateVersion = "25.05";
     };
@@ -209,5 +209,6 @@ in
         nil
       ]
     );
+    system.stateVersion = "25.05";
   };
 }
