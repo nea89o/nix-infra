@@ -148,6 +148,12 @@
     symbola
 
   ];
+  home-manager.users.${config.user} = {
+    programs.kitty = {
+      enable = true;
+    };
+
+  };
 
   environment.systemPackages = (
     with pkgs;
