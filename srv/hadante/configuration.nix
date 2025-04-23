@@ -171,6 +171,11 @@ in
         // {
           ".gradle/gradle.properties".text = ''
             test.property = true
+            org.gradle.java.installations.paths=${
+              builtins.concatStringsSep "," (
+                builtins.map (name: "/home/" + config.user + "/.jdks/" + name) builtins.attrNames javas
+              )
+            }
           '';
         };
       home.stateVersion = "25.05";
