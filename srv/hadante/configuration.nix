@@ -22,6 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "hadante"; # Define your hostname.
+  user = "nea";
 
   # Use lesbian nix
   nix.package = pkgs.lix;
@@ -89,7 +90,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nea = {
+  users.users.${config.user} = {
     isNormalUser = true;
     description = "Linnea Gräf";
     extraGroups = [
@@ -102,15 +103,6 @@
   };
   users.defaultUserShell = pkgs.zsh;
 
-  # Enable automatic login for the user.
-  # services.xserver.displayManager.autoLogin.enable = true;
-  # services.xserver.displayManager.autoLogin.user = "nea";
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   programs = {
@@ -152,7 +144,6 @@
     programs.kitty = {
       enable = true;
     };
-
   };
 
   environment.systemPackages = (
