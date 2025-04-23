@@ -154,6 +154,9 @@ in
       };
       home.file = {
         ".jdks/jdk21".source = pkgs.jdk21;
+        ".jdks/jdk17".source = pkgs.jdk17;
+        ".jdks/jdk11".source = pkgs.jdk11;
+        ".jdks/jdk8".source = pkgs.jdk8;
       };
       home.stateVersion = "25.05";
     };
