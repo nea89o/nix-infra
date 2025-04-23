@@ -173,7 +173,7 @@ in
             test.property = true
             org.gradle.java.installations.paths=${
               builtins.concatStringsSep "," (
-                builtins.map (name: "/home/" + config.user + "/.jdks/" + name) builtins.attrNames javas
+                builtins.map (name: "/home/" + config.user + "/.jdks/" + name) (builtins.attrNames javas)
               )
             }
           '';
