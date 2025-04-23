@@ -148,6 +148,12 @@ in
       symbola
 
     ];
+
+    xdg.portal = {
+      enable = true;
+      wlr = true;
+    };
+
     home-manager.users.${config.user} = {
       programs.kitty = {
         enable = true;
