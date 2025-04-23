@@ -3,6 +3,10 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
@@ -37,10 +41,17 @@
       lanzaboote,
       flake-utils,
       customss,
+      home-manager,
       ...
     }:
     let
-      osConfig = {
+      staticConfig = {
+        homeConfigurations = {
+          "nea" = home-manager.lib.homeManagerConfiguration {
+            pkgs = import nixpkgs { system = "x86_64-linux"; };
+            modules = [ ];
+          };
+        };
         nixosConfigurations = {
           hadante = nixpkgs.lib.nixosSystem rec {
             system = "x86_64-linux";
@@ -89,5 +100,5 @@
         }
       );
     in
-    (metaConfig // osConfig);
+    (metaConfig // staticConfig);
 }
