@@ -9,7 +9,9 @@
   inputs,
   ...
 }:
-
+let
+  lib = pkgs.lib;
+in
 {
   imports = [
     # Include the results of the hardware scan.
