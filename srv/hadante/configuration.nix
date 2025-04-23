@@ -194,6 +194,7 @@ inputs@{
       bolt-launcher
 
       vscode
+      gamescope
     ]
   );
 }
