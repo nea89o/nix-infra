@@ -17,6 +17,14 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  options = {
+    user = lib.mkOption {
+      type = lib.types.uniq lib.types.str;
+      description = "The main user name";
+
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
