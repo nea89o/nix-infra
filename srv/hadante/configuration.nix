@@ -152,12 +152,27 @@ in
       programs.kitty = {
         enable = true;
       };
-      home.file = {
-        ".jdks/jdk21".source = pkgs.jdk21;
-        ".jdks/jdk17".source = pkgs.jdk17;
-        ".jdks/jdk11".source = pkgs.jdk11;
-        ".jdks/jdk8".source = pkgs.jdk8;
-      };
+      home.file =
+        let
+          javas = {
+            jdk21 = pkgs.jdk21;
+            jdk17 = pkgs.jdk17;
+            jdk11 = pkgs.jdk11;
+            jdk8 = pkgs.jdk8;
+          };
+        in
+
+        (lib.attrsets.mapAttrs' (
+          label: package:
+          lib.attrsets.nameValuePair (".jdks/" + label) {
+            source = package;
+          }
+        ) javas)
+        // {
+          ".gradle/gradle.properties".text = ''
+
+          '';
+        };
       home.stateVersion = "25.05";
     };
 
