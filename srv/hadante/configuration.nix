@@ -170,10 +170,11 @@ in
         ) javas)
         // {
           ".gradle/gradle.properties".text = ''
-            test.property = true
             org.gradle.java.installations.paths=${
               builtins.concatStringsSep "," (
-                builtins.map (name: "/home/" + config.user + "/.jdks/" + name) (builtins.attrNames javas)
+                builtins.map (name: "/home/" + config.user + "/.jdks/" + name + "/lib/openjdk") (
+                  builtins.attrNames javas
+                )
               )
             }
           '';
