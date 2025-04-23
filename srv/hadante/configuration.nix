@@ -150,12 +150,15 @@ in
     ];
 
     xdg.portal = {
+      enable = true;
+      config.common.default = "*";
       wlr = {
         enable = true;
         settings = {
-          chooser_type = "simple";
-          chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
-
+          screencast = {
+            chooser_type = "simple";
+            chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -or";
+          };
         };
       };
     };
