@@ -45,12 +45,9 @@
       ...
     }:
     let
-      staticConfig = {
+      staticConfig = rec {
         homeConfigurations = {
-          "nea" = home-manager.lib.homeManagerConfiguration {
-            pkgs = import nixpkgs { system = "x86_64-linux"; };
-            modules = [ ];
-          };
+          hadante = nixosConfigurations.hadante.config.home-manager.users.nea.home;
         };
         nixosConfigurations = {
           hadante = nixpkgs.lib.nixosSystem rec {
