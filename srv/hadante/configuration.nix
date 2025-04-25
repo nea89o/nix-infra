@@ -193,6 +193,10 @@ in
               )
             }
           '';
+          ".cargo/config.toml".text = ''
+            		[net]
+            		git-fetch-with-cli = true
+            	  '';
         };
       home.stateVersion = "25.05";
     };
