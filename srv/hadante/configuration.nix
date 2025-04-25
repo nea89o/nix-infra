@@ -250,6 +250,7 @@ in
         vscode
         gamescope
         nil
+        google-chrome
       ]
     );
     system.stateVersion = "25.05";
