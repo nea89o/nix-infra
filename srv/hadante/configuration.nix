@@ -251,6 +251,7 @@ in
         gamescope
         nil
         google-chrome
+        pwvucontrol
       ]
     );
     system.stateVersion = "25.05";
