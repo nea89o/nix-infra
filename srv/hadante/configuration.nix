@@ -252,6 +252,7 @@ in
         nil
         google-chrome
         pwvucontrol
+        unzip
       ]
     );
     system.stateVersion = "25.05";
