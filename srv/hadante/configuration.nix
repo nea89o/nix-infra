@@ -253,6 +253,9 @@ in
         google-chrome
         pwvucontrol
         unzip
+
+        heroic
+
       ]
     );
     system.stateVersion = "25.05";
