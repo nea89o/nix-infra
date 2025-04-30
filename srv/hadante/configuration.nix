@@ -256,6 +256,7 @@ in
 
         heroic
 
+        adwaita-icon-theme
       ]
     );
     system.stateVersion = "25.05";
