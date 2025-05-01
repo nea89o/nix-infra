@@ -252,11 +252,16 @@ in
         nil
         google-chrome
         pwvucontrol
-        unzip
 
         heroic
 
         adwaita-icon-theme
+
+        unzip
+        file
+        zip
+        p7zip
+
       ]
     );
     system.stateVersion = "25.05";
