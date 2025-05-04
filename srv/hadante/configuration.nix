@@ -262,6 +262,8 @@ in
         zip
         p7zip
 
+        whatsapp-for-linux
+
       ]
     );
     system.stateVersion = "25.05";
