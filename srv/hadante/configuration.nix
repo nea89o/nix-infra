@@ -262,7 +262,6 @@ in
         zip
         p7zip
 
-        whatsie
       ]
     );
     system.stateVersion = "25.05";
