@@ -262,8 +262,7 @@ in
         zip
         p7zip
 
-        whatsapp-for-linux
-
+        whatsie
       ]
     );
     system.stateVersion = "25.05";
