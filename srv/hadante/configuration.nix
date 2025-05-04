@@ -262,6 +262,7 @@ in
         zip
         p7zip
 
+        gh
       ]
     );
     system.stateVersion = "25.05";
