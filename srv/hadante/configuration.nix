@@ -270,6 +270,8 @@ in
         p7zip
 
         gh
+        ausweisapp
+
       ]
     );
     system.stateVersion = "25.05";
