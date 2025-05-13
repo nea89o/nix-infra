@@ -38,7 +38,12 @@ in
     nix.package = pkgs.lix;
 
     # Enable networking
-    networking.networkmanager.enable = true;
+    networking = {
+
+      networkmanager.enable = true;
+      # Local network is behind a router anyway.
+      firewall.enable = false;
+    };
 
     # Set your time zone.
     time.timeZone = "Europe/Berlin";
