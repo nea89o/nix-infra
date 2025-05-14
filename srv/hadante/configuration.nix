@@ -277,6 +277,7 @@ in
         gh
         ausweisapp
 
+        telegram-desktop
       ]
     );
     system.stateVersion = "25.05";
