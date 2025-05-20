@@ -1,3 +1,3 @@
 final: prev: {
-  swaykill = final.callPackage ./swaykill;
+  swaykill = final.callPackage ./swaykill { };
 }

@@ -3,17 +3,21 @@
   sway,
   makeWrapper,
   jq,
-  xargs,
-  kill,
+  coreutils,
+  pkgs,
 }:
+let
+  script = (pkgs.writeScriptBin "swaykill" (builtins.readFile ./swaykill.sh)).overrideAttrs (old: {
+    buildCommand = "${old.buildCommand}\n patchShebangs $out";
+  });
+in
 symlinkJoin rec {
   name = "swaykill";
   paths = [
-    ./swaykill.sh
+    script
     sway
     jq
-    xargs
-    kill
+    coreutils
   ];
   buildInputs = [ makeWrapper ];
   postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
