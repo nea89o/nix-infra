@@ -278,6 +278,10 @@ in
         ausweisapp
 
         telegram-desktop
+
+        alejandra
+
+        swaykill
       ]
     );
     system.stateVersion = "25.05";
