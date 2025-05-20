@@ -57,7 +57,7 @@
               (inputs: {
                 nixpkgs.overlays = [
                   customss.overlays.default
-                  ./pkgs
+                  (import ./pkgs)
                 ];
               })
               ./srv/hadante/configuration.nix
