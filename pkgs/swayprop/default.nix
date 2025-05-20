@@ -1,24 +1,25 @@
 {
   symlinkJoin,
+  slurp,
   sway,
   makeWrapper,
   jq,
-  swayprop,
   coreutils,
   pkgs,
 }:
 let
-  script = (pkgs.writeScriptBin "swaykill" (builtins.readFile ./swaykill.sh)).overrideAttrs (old: {
+  script-name = "swayprop";
+  script = (pkgs.writeScriptBin script-name (builtins.readFile ./swayprop.sh)).overrideAttrs (old: {
     buildCommand = "${old.buildCommand}\n patchShebangs $out";
   });
 in
 symlinkJoin rec {
-  name = "swaykill";
+  name = script-name;
   paths = [
     script
     sway
     jq
-    swayprop
+    slurp
     coreutils
   ];
   buildInputs = [ makeWrapper ];
