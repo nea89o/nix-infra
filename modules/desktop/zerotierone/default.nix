@@ -8,6 +8,8 @@
 {
   services.zerotierone = {
     enable = true;
-    joinNetworks = import config.age.secrets.secret1.path;
+    joinNetworks = [
+      "363c67c55a720f73"
+    ];
   };
 }
