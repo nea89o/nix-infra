@@ -206,10 +206,9 @@ in
             }
 
           ;
-          ".cargo/config.toml".text = ''
-            		[net]
-            		git-fetch-with-cli = true
-            	  '';
+          ".cargo/config.toml".source = (pkgs.formats.toml { }).generate "config.toml" {
+            net.git-fetch-with-cli = true;
+          };
         };
       home.stateVersion = "25.05";
     };
