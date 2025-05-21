@@ -18,6 +18,7 @@ in
     ../../modules/desktop/zerotierone
     inputs.home-manager.nixosModules.home-manager
     inputs.agenix.nixosModules.default
+    ./agenix.nix
   ];
 
   options = {
@@ -283,7 +284,7 @@ in
         alejandra
 
         swaykill
-        agenix
+        inputs.agenix.packages.${c}
       ]
     );
     system.stateVersion = "25.05";
