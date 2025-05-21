@@ -15,6 +15,7 @@ in
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/desktop/zerotierone
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -197,15 +198,14 @@ in
         ) javas)
         // {
           ".gradle/gradle.properties".source =
-            (pkgs.formats.javaProperties { }).generate "gradle.properties" {
-              "org.gradle.java.installations.paths" = builtins.concatStringsSep "," (
-                builtins.map (name: "/home/" + config.user + "/.jdks/" + name + "/lib/openjdk") (
-                  builtins.attrNames javas
-                )
-              );
-            }
-
-          ;
+            (pkgs.formats.javaProperties { }).generate "gradle.properties"
+              {
+                "org.gradle.java.installations.paths" = builtins.concatStringsSep "," (
+                  builtins.map (name: "/home/" + config.user + "/.jdks/" + name + "/lib/openjdk") (
+                    builtins.attrNames javas
+                  )
+                );
+              };
           ".cargo/config.toml".source = (pkgs.formats.toml { }).generate "config.toml" {
             net.git-fetch-with-cli = true;
           };

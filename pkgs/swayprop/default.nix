@@ -13,7 +13,7 @@ let
     buildCommand = "${old.buildCommand}\n patchShebangs $out";
   });
 in
-symlinkJoin rec {
+symlinkJoin {
   name = script-name;
   paths = [
     script
@@ -23,5 +23,5 @@ symlinkJoin rec {
     coreutils
   ];
   buildInputs = [ makeWrapper ];
-  postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
+  postBuild = "wrapProgram $out/bin/${script-name} --prefix PATH : $out/bin";
 }
