@@ -196,15 +196,16 @@ in
           }
         ) javas)
         // {
-          ".gradle/gradle.properties".text = ''
-            org.gradle.java.installations.paths=${
-              builtins.concatStringsSep "," (
+          ".gradle/gradle.properties".source =
+            (pkgs.formats.javaProperties { }).generate "gradle.properties" {
+              "org.gradle.java.installations.paths" = builtins.concatStringsSep "," (
                 builtins.map (name: "/home/" + config.user + "/.jdks/" + name + "/lib/openjdk") (
                   builtins.attrNames javas
                 )
-              )
+              );
             }
-          '';
+
+          ;
           ".cargo/config.toml".text = ''
             		[net]
             		git-fetch-with-cli = true
