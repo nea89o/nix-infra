@@ -18,6 +18,7 @@ in
     ../../modules/desktop/zerotierone
     inputs.home-manager.nixosModules.home-manager
     ./agenix.nix
+    ./waybar.nix
   ];
 
   options = {
