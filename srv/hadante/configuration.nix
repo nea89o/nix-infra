@@ -20,6 +20,7 @@ in
     ./agenix.nix
     ./waybar.nix
     ./mako.nix
+    ./fuzzel.nix
   ];
 
   options = {
