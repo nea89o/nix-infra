@@ -9,7 +9,7 @@
         fields = "name,categories";
       };
       colors = {
-        background = "#232634";
+        background = "80232634";
       };
     };
   };
