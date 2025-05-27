@@ -8,6 +8,9 @@
         use-bold = true;
         fields = "name,categories";
       };
+      color = {
+        background = "#232634";
+      };
     };
   };
 }
