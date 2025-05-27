@@ -2,14 +2,12 @@
 {
   home-manager.users.${config.user} = {
     programs.fuzzel.enable = true;
+    catppuccin.fuzzel.enable = true;
     programs.fuzzel.settings = {
       main = {
         font = "ComicShannsMono Nerd Font";
         use-bold = true;
         fields = "name,categories";
-      };
-      colors = {
-        background = "80232634";
       };
     };
   };

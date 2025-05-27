@@ -181,9 +181,10 @@ in
     };
 
     home-manager.users.${config.user} = {
-      programs.kitty = {
-        enable = true;
-      };
+      imports = [
+        inputs.catppuccin.homeModules.catppuccin
+      ];
+
       home.file =
         let
           javas = {
