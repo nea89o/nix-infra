@@ -8,7 +8,7 @@
         use-bold = true;
         fields = "name,categories";
       };
-      color = {
+      colors = {
         background = "#232634";
       };
     };
