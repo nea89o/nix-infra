@@ -19,6 +19,7 @@ in
     inputs.home-manager.nixosModules.home-manager
     ./agenix.nix
     ./waybar.nix
+    ./mako.nix
   ];
 
   options = {
