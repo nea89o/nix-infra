@@ -236,7 +236,6 @@ in
         sway
         webp-pixbuf-loader
         delta
-        rofi
 
         wezterm
 
