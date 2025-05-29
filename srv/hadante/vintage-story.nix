@@ -18,5 +18,6 @@ in
         v1-20-10
       ];
     };
+    home.packages = [ VSPkgs.latest ];
   };
 }
