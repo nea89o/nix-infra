@@ -18,6 +18,9 @@ in
         v1-20-10
       ];
     };
-    home.packages = [ VSPkgs.latest ];
+    home.packages = [
+      VSPkgs.latest
+      pkgs.dotnet-runtime
+    ];
   };
 }
