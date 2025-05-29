@@ -15,7 +15,7 @@ in
       enable = true;
       installedVersions = with VSPkgs; [
         # Current version I'm playing on with mods
-        v1-20-4-m
+        v1-20-10
       ];
     };
   };
