@@ -31,6 +31,10 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vintagestory-nix = {
+      url = "github:PierreBorine/vintagestory-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     agenix.url = "github:ryantm/agenix";
   };

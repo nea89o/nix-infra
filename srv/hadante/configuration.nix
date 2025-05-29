@@ -21,6 +21,7 @@ in
     ./waybar.nix
     ./mako.nix
     ./fuzzel.nix
+    ./vintage-story.nix
   ];
 
   options = {
@@ -297,6 +298,7 @@ in
         alejandra
 
         swaykill
+        protontricks
 
         ente-auth
       ]

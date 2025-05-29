@@ -400,7 +400,8 @@
         "home-manager": "home-manager_2",
         "lanzaboote": "lanzaboote",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "vintagestory-nix": "vintagestory-nix"
       }
     },
     "rust-overlay": {
@@ -466,6 +467,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "vintagestory-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1746442675,
+        "narHash": "sha256-1Ih0UsDLLfyC6A04MAFlxijlUkRkwPNk/Xp+8N9EKek=",
+        "owner": "PierreBorine",
+        "repo": "vintagestory-nix",
+        "rev": "a91546aad9a75d075d945efa3d067864e29c750d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PierreBorine",
+        "repo": "vintagestory-nix",
         "type": "github"
       }
     }
