@@ -68,6 +68,17 @@ in
       LC_TIME = "de_DE.UTF-8";
     };
 
+    services.gnome.gnome-keyring.enable = true;
+    security.pam.services = {
+      greetd.enableGnomeKeyring = true;
+      greetd-pasword.enableGnomeKeyring = true;
+      login.enableGnomeKeyring = true;
+    };
+    services.dbus.packages = [
+      pkgs.gnome-keyring
+      pkgs.gcr
+    ];
+
     # Enable the GNOME Desktop Environment.
     services.displayManager.ly = {
       settings = {
@@ -286,6 +297,8 @@ in
         alejandra
 
         swaykill
+
+        ente-auth
       ]
     );
     system.stateVersion = "25.05";
