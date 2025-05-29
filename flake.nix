@@ -57,7 +57,7 @@
         nixosConfigurations = {
           hadante = nixpkgs.lib.nixosSystem rec {
             system = "x86_64-linux";
-            specialArgs = { inherit inputs; };
+            specialArgs = { inherit inputs system; };
             modules = [
               (inputs: {
                 nixpkgs.overlays = [
