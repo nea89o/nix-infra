@@ -254,6 +254,8 @@ in
         vesktop
         ripgrep
 
+        audiorelay
+
         prismlauncher
         jdk8
         jdk17
