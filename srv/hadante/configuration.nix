@@ -254,7 +254,7 @@ in
         vesktop
         ripgrep
 
-        audiorelay
+        stackpkgs.audiorelay
 
         prismlauncher
         jdk8
