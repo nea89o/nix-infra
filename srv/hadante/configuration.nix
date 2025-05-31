@@ -152,6 +152,10 @@ in
         enableSSHSupport = true;
         pinentryPackage = pkgs.pinentry-qt;
       };
+      git = {
+        enable = true;
+        lfs.enable = true;
+      };
       direnv = {
         enable = true;
         nix-direnv.enable = true;
@@ -235,7 +239,6 @@ in
       [
         neovim
         atuin
-        git
         zsh
         yadm
         openssl
@@ -255,8 +258,6 @@ in
         ripgrep
 
         stackpkgs.audiorelay
-
-        ags
 
         prismlauncher
         jdk8
