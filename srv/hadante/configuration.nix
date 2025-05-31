@@ -256,6 +256,8 @@ in
 
         stackpkgs.audiorelay
 
+        ags
+
         prismlauncher
         jdk8
         jdk17
