@@ -401,6 +401,7 @@
         "lanzaboote": "lanzaboote",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_3",
+        "ryze-stackpkgs": "ryze-stackpkgs",
         "vintagestory-nix": "vintagestory-nix"
       }
     },
@@ -422,6 +423,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "ryze-stackpkgs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1747625777,
+        "narHash": "sha256-Jix0vladsSQ2kEYpGSTVfIXwMRqSt97q0oJaU4llNFw=",
+        "owner": "ryze312",
+        "repo": "stackpkgs",
+        "rev": "352044a85c3b10e9e52b5636b1c1322dca9d45b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryze312",
+        "repo": "stackpkgs",
         "type": "github"
       }
     },

@@ -36,6 +36,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ryze-stackpkgs = {
+      url = "github:ryze312/stackpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix.url = "github:ryantm/agenix";
   };
   outputs =
@@ -47,6 +52,7 @@
       flake-utils,
       customss,
       home-manager,
+      ryze-stackpkgs,
       ...
     }:
     let
@@ -61,6 +67,7 @@
             modules = [
               (inputs: {
                 nixpkgs.overlays = [
+                  ryze-stackpkgs.overlays.default
                   customss.overlays.default
                   (import ./pkgs)
                 ];
