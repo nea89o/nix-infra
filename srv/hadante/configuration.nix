@@ -305,6 +305,7 @@ in
         swaykill
         protontricks
 
+        foot
         ente-auth
       ]
     );
