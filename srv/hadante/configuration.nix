@@ -279,6 +279,8 @@ in
 
         myss
 
+        jextract
+
         bolt-launcher
 
         vscode
