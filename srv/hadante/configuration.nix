@@ -205,6 +205,8 @@ in
         let
           javas = {
             jdk21 = pkgs.jdk21;
+            jdk22 = pkgs.jdk22;
+            jdk24 = pkgs.jdk24;
             jdk17 = pkgs.jdk17;
             jdk11 = pkgs.jdk11;
             jdk8 = pkgs.jdk8;
