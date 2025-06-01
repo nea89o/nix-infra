@@ -279,7 +279,7 @@ in
 
         myss
 
-        jextract
+        jextract-21
 
         bolt-launcher
 
