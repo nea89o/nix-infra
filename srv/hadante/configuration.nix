@@ -308,6 +308,10 @@ in
         swaykill
         protontricks
 
+        space-station-14-launcher
+
+        element-desktop
+
         foot
         ente-auth
       ]
